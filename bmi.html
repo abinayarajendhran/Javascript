@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let heightINCm = 165;
+let weightINKg = 95;
+let heightINM = heightINCm / 100;
+let bmi = weightINKg / (heightINM*heightINM);
+if (bmi<18.5){
+   console.log("Category:Lean");
+} 
+else if(bmi>=18.5 && bmi<=24){
+    console.log("Category:Normal weight");
+}
+else{
+    console.log("Category:Overweight");
+}
+</script>
+</body>
+</html>
