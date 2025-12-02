@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+ <select id="selectbox" onchange="fun()">
+   <option></option>
+ </select>
+<button onclick="showValues()">Submit</button>
+<div id="output"></div>
+<script>
+function showValues() {
+ let a=document.querySelector('input').value
+ document.querySelector('select').innerHTML+=`<option value=${a}>${a}</option>`
+}
+function fun(){
+   let values=["HTML","CSS","JAVASCRIPT"];
+   let selected=document.getElementById("selectbox").value;
+   let index=values.indexOf(selected);
+   let current=selected;
+   let previous=values[index - 1] || "None";
+   let next=values[index + 1] || "None";
+   document.getElementById("output").innerHTML="Current Value:"+current+"<br>"+"Previous Value:"+previous+"<br>"
+   +"Next Value:"+next;
+  }
+
+</script>
+</body>
+</html>
